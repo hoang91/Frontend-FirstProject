@@ -6,6 +6,12 @@
   --color-body: #918ca4;
 }
 
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
 /* TYPOGRAPHY */
 
 html {
@@ -13,10 +19,10 @@ html {
 }
 
 body {
+  color: var(--color-body);
   font-family: "Inter", Arial, Helvetica, sans-serif;
   font-size: 2.4rem;
   line-height: 1.5;
-  color: var(--color-body);
 }
 
 h1,
@@ -61,10 +67,10 @@ a {
 }
 
 .link-arrow {
-  text-transform: uppercase;
+  color: var(--color-accent);
   font-size: 2rem;
   font-weight: 700;
-  color: var(--color-accent);
+  text-transform: uppercase;
 }
 
 .link-arrow::after {
@@ -88,9 +94,9 @@ a {
 
 .badge {
   border-radius: 20px;
-  padding: 0.5rem 2rem;
   font-size: 2rem;
   font-weight: 600;
+  padding: 0.5rem 2rem;
   white-space: nowrap;
 }
 
@@ -158,11 +164,75 @@ a {
 }
 
 .icon-container {
+  align-items: center;
   background: #f3f9fa;
-  width: 64px;
-  height: 64px;
   border-radius: 100%;
   display: inline-flex;
+  height: 64px;
   justify-content: center;
-  align-items: center;
+  width: 64px;
+}
+
+/* BUTTONS */
+
+.btn {
+  border-radius: 40px;
+  border: 0;
+  cursor: pointer;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 1rem 0;
+  padding: 2rem 3rem;
+  text-align: center;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.btn--primary {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.btn--primary:hover {
+  background: #57a0ff;
+}
+
+.btn--secondary {
+  background: var(--color-secondary);
+  color: #fff;
+}
+
+.btn--secondary:hover {
+  background: #33e0ff;
+}
+
+.btn--accent {
+  background: var(--color-accent);
+  color: #fff;
+}
+
+.btn--accent:hover {
+  background: #e62e00;
+}
+
+.btn--outline {
+  background: transparent;
+  border: 2px solid var(--color-headings);
+  color: var(--color-headings);
+}
+
+.btn--outline:hover {
+  background: var(--color-headings);
+  color: #fff;
+}
+
+.btn--block {
+  width: 100%;
+  display: inline-block;
+}
+
+@media screen and (min-width: 1024px) {
+  .btn {
+    font-size: 1.5rem;
+  }
 }
