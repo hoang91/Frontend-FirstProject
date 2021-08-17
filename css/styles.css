@@ -373,3 +373,35 @@ a {
     font-size: 1.5rem;
   }
 }
+
+/* MEDIA */
+
+.media {
+  display: flex;
+}
+
+.media__body {
+  margin: 0 2rem;
+}
+
+.media__title {
+  margin-top: 0;
+  font-size: 2.4rem;
+  color: #fff;
+}
+
+.media__image {
+  margin: 1rem;
+}
+
+.media__description {
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .media__title,
+  .media__description {
+    font-size: 1.8rem;
+  }
+}
