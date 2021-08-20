@@ -774,6 +774,7 @@ a {
 }
 
 .block-domain__prices a {
+  color: var(--color-headings);
   display: none;
 }
 
@@ -784,6 +785,7 @@ a {
   .block-domain__content {
     font-size: 1.8rem;
   }
+  .block-domain__prices,
   .block-domain__prices .badge {
     font-size: 1.5rem;
   }
@@ -792,11 +794,7 @@ a {
   }
   .block-domain__prices a:hover,
   .block-domain__prices a:focus {
-    color: red;
-  }
-  .block-domain__prices a:visited,
-  .block-domain__prices a:link {
-    color: var(--color-headings);
+    color: #4e32b3;
   }
 }
 
