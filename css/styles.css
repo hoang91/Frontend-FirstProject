@@ -505,6 +505,22 @@ a {
   }
 }
 
+@media screen and (max-width: 767px) {
+  .quote {
+    margin: 3rem;
+    font-size: 2.2rem;
+  }
+  .media__image .icon {
+    width: 25px;
+  }
+  .media__body {
+    margin-right: 0;
+  }
+  .quote__author {
+    font-size: 2.6rem;
+  }
+}
+
 /* GRIDS */
 
 .grid {
@@ -549,6 +565,16 @@ a {
   }
   .testimonial .quote {
     margin-left: 6rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .testimonial {
+    padding: 0;
+  }
+  .testimonial__image > .icon-container {
+    position: absolute;
+    transform: translate(-100%, 0%);
   }
 }
 
