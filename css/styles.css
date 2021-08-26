@@ -206,7 +206,7 @@ a {
   font-size: 1.8rem;
   font-weight: 600;
   margin: 1rem 0;
-  padding: 2rem 3rem;
+  padding: 2rem 4vw;
   text-align: center;
   text-transform: uppercase;
   white-space: nowrap;
@@ -270,6 +270,7 @@ a {
 @media screen and (min-width: 1024px) {
   .btn {
     font-size: 1.5rem;
+    padding: 2rem 3rem;
   }
 }
 
@@ -296,8 +297,9 @@ a {
 
 .input-group .input {
   border: none;
-  padding-left: 1.5rem 1rem;
+  padding-left: 1.5rem;
   flex-grow: 1;
+  width: 0;
 }
 
 .input-group .btn {
@@ -780,6 +782,7 @@ a {
   justify-items: center;
   max-width: 730px;
   margin: 0 auto;
+  color: var(--color-headings);
 }
 
 .block-domain__content {
@@ -791,9 +794,16 @@ a {
   display: none;
 }
 
+@media screen and (max-width: 511px) {
+  .block-domain__prices {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media screen and (min-width: 768px) {
   .block-domain__prices {
     grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    grid-template-rows: 0;
   }
   .block-domain__content {
     font-size: 1.8rem;
@@ -825,6 +835,12 @@ a {
 @media screen and (max-width: 1023px) {
   .plan--popular {
     transform: scale(1);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .block-plans {
+    padding-top: 0;
   }
 }
 
@@ -876,5 +892,80 @@ a {
   }
   .block-showcase .block__header {
     margin-bottom: 6rem;
+  }
+}
+
+/* FOOTER BLOCK */
+
+.footer a {
+  color: #777;
+}
+
+.footer a:hover {
+  color: #fff;
+  transition: color 0.3s;
+}
+
+.footer {
+  background: #232323;
+}
+
+.footer__section {
+  padding: 2rem; /* 4rem 1.5rem */
+  border-bottom: 1px solid #393939;
+}
+
+.footer_section .list {
+  margin: 0;
+}
+
+.footer__heading {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.footer__brand {
+  margin-top: 5rem;
+  text-align: center;
+}
+
+.footer__brand img {
+  /* TODO: Consider refactoring this and applying it to all images. */
+  width: 100%;
+  max-width: 230px;
+}
+
+.footer__copyright {
+  font-size: 2.1rem;
+  color: #fff;
+  opacity: 0.3;
+}
+
+@media screen and (min-width: 768px) {
+  .footer__sections {
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  }
+  .footer .collapsible__chevron {
+    display: none;
+  }
+  .footer .collapsible__content {
+    opacity: 1;
+    max-height: 100%;
+  }
+  .footer__brand {
+    order: -1;
+    margin-top: 1rem;
+  }
+  .footer__copyright {
+    font-size: 1.5rem;
+  }
+  .footer__section {
+    border: none;
+  }
+  .footer__heading {
+    font-size: 1.6rem;
+  }
+  .footer li {
+    font-size: 1.5rem;
   }
 }
